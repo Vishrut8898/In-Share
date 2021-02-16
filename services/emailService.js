@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-module.exports = async ({ from, to, subject, text, html}) => {
+module.exports = async ({ to, subject, text, html}) => {
     // let transporter = nodemailer.createTransport({
     //     host: process.env.SMTP_HOST,
     //     port: process.env.SMTP_PORT,
@@ -30,7 +30,7 @@ module.exports = async ({ from, to, subject, text, html}) => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: `Node File Share App <${from}>`, // sender address
+        from: `Node File Share App <lucifermorningstar9869@gmail.com>`, // sender address
         to: to, // list of receivers
         subject: subject, // Subject line
         text: text, // plain text body
