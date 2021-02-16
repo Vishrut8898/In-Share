@@ -30,7 +30,7 @@ module.exports = async ({ to, subject, text, html}) => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: `Node File Share App <lucifermorningstar9869@gmail.com>`, // sender address
+        from: `Node File Share App <lucifermorningstar9869@outlook.com>`, // sender address
         to: to, // list of receivers
         subject: subject, // Subject line
         text: text, // plain text body

@@ -45,10 +45,10 @@ router.post('/', (req, res) => {
 });
 
 router.post('/send', async (req, res) => {
-    const { uuid, emailTo, emailFrom } = req.body;
+    const { uuid, emailTo } = req.body;
 
     //Validate request
-    if (!uuid || !emailTo || !emailFrom) {
+    if (!uuid || !emailTo) {
         return  res.status(422).send({error: 'All fields are required.'})
     }
 
@@ -58,7 +58,7 @@ router.post('/send', async (req, res) => {
         return res.status(422).send({ error: 'Email already sent.' })
     }
 
-    file.sender = emailFrom;
+    // file.sender = emailFrom;
     file.receiver = emailTo;
 
     const response = await file.save();
